@@ -3,7 +3,7 @@
 cat << CONFEOF > /etc/Caddyfile
 
 https://$CADDY_DOMAIN {
-    ipfilter paths... {
+    ipfilter / {
         rule       allow
         ip         $IP_WHITE_LIST
         strict
