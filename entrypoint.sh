@@ -2,8 +2,6 @@
 
 cat << CONFEOF > /etc/Caddyfile
 
-0.0.0.0
-
 https://$CADDY_DOMAIN {
     proxy / $PROXY_TARGET {
         proxy_header Host {host}
