@@ -3,11 +3,6 @@
 cat << CONFEOF > /etc/Caddyfile
 
 https://$CADDY_DOMAIN {
-    ipfilter / {
-        rule       allow
-        ip         $IP_WHITE_LIST
-        strict
-    }
 
     proxy / $PROXY_TARGET {
         proxy_header Host {host}
